@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Lucas Meldrum - Computer Science & Computational Arts Portfolio">
-  <meta name="keywords" content="developer, designer, portfolio, creative coding">
-  <title>Lucas Meldrum | Creative Developer</title>
+  <meta name="keywords" content="developer, designer, portfolio, creative coding, 3D design, game development">
+  <title>Lucas Meldrum | Creative Developer & Digital Artist</title>
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -53,21 +53,20 @@
           <h1 class="gradient-text">Lucas Meldrum</h1>
           <p class="subtitle">Creative Developer & Digital Artist</p>
           <p class="description">
-            Third-year student at Concordia University pursuing a joint major in 
+            Third-year Concordia University student majoring in 
             <span class="highlight">Computer Science</span> and 
             <span class="highlight">Computational Arts</span>. 
-            I build software systems, interactive applications, and creative technical projects 
-            that blend engineering with design.
+            I create immersive digital experiences that blend technical innovation with artistic expression.
           </p>
           <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">
-              <i class="ti ti-code"></i> View Projects
+              <i class="ti ti-code"></i> Explore Projects
             </a>
-            <a href="resume.pdf" class="btn btn-secondary" download>
-              <i class="ti ti-download"></i> Download Resume
-            </a>
-            <a href="#contact" class="btn btn-outline">
+            <a href="#contact" class="btn btn-secondary">
               <i class="ti ti-mail"></i> Contact Me
+            </a>
+            <a href="assets/resume.pdf" class="btn btn-outline" download>
+              <i class="ti ti-download"></i> Download Resume
             </a>
           </div>
           <div class="social-links">
@@ -84,8 +83,12 @@
         </div>
         <div class="hero-visual">
           <div class="visual-element">
-            <!-- Animated background element -->
             <div class="gradient-orb"></div>
+            <div class="floating-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -96,27 +99,26 @@
   <section class="projects" id="projects">
     <div class="container">
       <div class="section-header">
-        <h2>Featured Projects</h2>
-        <p class="section-subtitle">A blend of code, art, and creative technology</p>
+        <h2>My Projects</h2>
+        <p class="section-subtitle">A collection of projects spanning art, code, and creative technology</p>
       </div>
 
       <!-- Project Filters -->
       <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="art">Art</button>
-        <button class="filter-btn" data-filter="code">Code</button>
-        <button class="filter-btn" data-filter="mix">Mixed</button>
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="art">Art & Design</button>
+        <button class="filter-btn" data-filter="code">Development</button>
+        <button class="filter-btn" data-filter="mix">Mixed Media</button>
+        <button class="filter-btn" data-filter="game">Game Dev</button>
       </div>
 
       <!-- Projects Grid -->
       <div class="projects-grid">
-        <!-- Project 1 - Nubian Pyramids -->
+        <!-- Project 1: 3D Design Pyramids -->
         <div class="project-card" data-category="art">
           <div class="project-media">
             <div class="image-carousel">
-              <img src="assets/images/pyramids/1.jpg" alt="Nubian Pyramids 3D Model">
-              <img src="assets/images/pyramids/2.jpg" alt="Pyramids Detail">
-              <img src="assets/images/pyramids/3.jpg" alt="Pyramids Wireframe">
+              <img src="assets/images/pyramids/3DPyramids.png" alt="Nubian Pyramids 3D Model">
             </div>
             <div class="project-overlay">
               <a href="#" class="project-link">View Details</a>
@@ -124,27 +126,28 @@
           </div>
           <div class="project-info">
             <div class="project-header">
-              <h3>Nubian Pyramids</h3>
+              <h3>3D Design: Pyramids & Mathematical Art</h3>
               <span class="project-badge art-badge">Art</span>
             </div>
             <p class="project-description">
-              Accurate-to-scale 3D reconstruction of Nubian pyramids using SketchUp and Blender.
+              Accurate-to-scale 3D reconstruction of Nubian pyramids using SketchUp, featuring vector art and mathematical visualization.
             </p>
             <div class="project-tech">
-              <span class="tech-tag">3D Design</span>
               <span class="tech-tag">SketchUp</span>
-              <span class="tech-tag">Architecture</span>
+              <span class="tech-tag">3D Modeling</span>
+              <span class="tech-tag">Vector Art</span>
+              <span class="tech-tag">Mathematics</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 2 - Art Jams -->
+        <!-- Project 2: Album Cover Design -->
         <div class="project-card" data-category="art">
           <div class="project-media">
             <div class="image-carousel">
-              <img src="assets/images/artjams/1.jpg" alt="Art Jam Project 1">
-              <img src="assets/images/artjams/2.jpg" alt="Art Jam Project 2">
-              <img src="assets/images/artjams/3.jpg" alt="Art Jam Project 3">
+              <img src="assets/images/album/AlbumFront.png" alt="Album Cover Front">
+              <img src="assets/images/album/AlbumBack.png" alt="Album Back Design">
+              <img src="assets/images/album/Final.png" alt="Cover Detail">
             </div>
             <div class="project-overlay">
               <a href="#" class="project-link">View Details</a>
@@ -152,57 +155,117 @@
           </div>
           <div class="project-info">
             <div class="project-header">
-              <h3>Art & Game Jams</h3>
+              <h3>Album Cover Design</h3>
               <span class="project-badge art-badge">Art</span>
             </div>
             <p class="project-description">
-              Experimental creative projects developed during art, mod, and variation jams.
+              Complete album artwork including front cover, back design, and inserts created with photography and digital editing.
             </p>
             <div class="project-tech">
-              <span class="tech-tag">Creative Coding</span>
-              <span class="tech-tag">Design</span>
-              <span class="tech-tag">Prototyping</span>
+              <span class="tech-tag">Photoshop</span>
+              <span class="tech-tag">Photography</span>
+              <span class="tech-tag">Digital Editing</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 3 - Unplug -->
+        <!-- Project 3: Art Jam (p5.js Collection) -->
         <div class="project-card" data-category="mix">
           <div class="project-media">
             <div class="image-carousel">
-              <img src="assets/images/unplug/1.jpg" alt="Unplug App Screen 1">
-              <img src="assets/images/unplug/2.jpg" alt="Unplug App Screen 2">
-              <img src="assets/images/unplug/3.jpg" alt="Unplug App Screen 3">
+              <img src="assets/images/art-jam/Art-Jam1.png" alt="Art Jam Project 1">
+              <img src="assets/images/art-jam/Art-Jam2.png" alt="Art Jam Project 2">
+              <img src="assets/images/art-jam/Art-Jam3.png" alt="Art Jam Project 3">
             </div>
             <div class="project-overlay">
-              <a href="https://github.com/LucasMeldrum/Unplug" target="_blank" class="project-link">
-                <i class="ti ti-external-link"></i> View Project
+              <a href="https://github.com/LucasMeldrum/CART253/tree/main/topics/assignments/art-jam" target="_blank" class="project-link">
+                <i class="ti ti-code"></i> View Repo
+              </a>
+              <a href="https://lucasmeldrum.github.io/CART253/topics/assignments/art-jam/" target="_blank" class="project-link">
+                <i class="ti ti-play"></i> Live Demo
               </a>
             </div>
           </div>
           <div class="project-info">
             <div class="project-header">
-              <h3>Unplug Mobile App</h3>
+              <h3>Creative Coding Jams (p5.js)</h3>
               <span class="project-badge mix-badge">Mixed</span>
             </div>
             <p class="project-description">
-              A mobile application focused on tracking habits, social interactions, and digital well-being.
+              A collection of three interactive art projects created during creative coding jams using p5.js and 3D visualization.
             </p>
             <div class="project-tech">
-              <span class="tech-tag">React Native</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">UI/UX</span>
+              <span class="tech-tag">p5.js</span>
+              <span class="tech-tag">3D Art</span>
+              <span class="tech-tag">Creative Coding</span>
+              <span class="tech-tag">JavaScript</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 4 - Tower Defence -->
+        <!-- Project 4: Photography & Photoshop -->
+        <div class="project-card" data-category="art">
+          <div class="project-media">
+            <div class="image-carousel">
+              <img src="assets/images/Photography + Digital Art/Photography + Digital Art-1.png" alt="Photography Sample 1">
+              <img src="assets/images/Photography + Digital Art/Photography + Digital Art-2.png" alt="Photography Sample 2">
+              <img src="assets/images/Photography + Digital Art/Photography + Digital Art-3.png" alt="Edited Photo">
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link">View Gallery</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-header">
+              <h3>Photography & Digital Editing</h3>
+              <span class="project-badge art-badge">Art</span>
+            </div>
+            <p class="project-description">
+              Collection of original photography with advanced digital editing and post-processing techniques.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Photography</span>
+              <span class="tech-tag">Photoshop</span>
+              <span class="tech-tag">Digital Art</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Nature Poster -->
+        <div class="project-card" data-category="art">
+          <div class="project-media">
+            <div class="image-carousel">
+              <img src="assets/images/Poster/Poster-1.png" alt="Nature Poster Full">
+              <img src="assets/images/Poster/Poster-2.png" alt="Poster Detail">
+              <img src="assets/images/Poster/Poster-3.png" alt="Design Elements">
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link">View Design</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-header">
+              <h3>Nature Conservation Poster</h3>
+              <span class="project-badge art-badge">Art</span>
+            </div>
+            <p class="project-description">
+              Environmental awareness poster combining artistic design with a powerful conservation message.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Graphic Design</span>
+              <span class="tech-tag">Illustrator</span>
+              <span class="tech-tag">Message Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: C++ Tower Defence -->
         <div class="project-card" data-category="code">
           <div class="project-media">
             <div class="image-carousel">
-              <img src="assets/images/towerdefence/1.jpg" alt="Tower Defence Gameplay">
-              <img src="assets/images/towerdefence/2.jpg" alt="Game Interface">
-              <img src="assets/images/towerdefence/3.jpg" alt="Game Map">
+              <img src="assets/images/cpp-tower-defence/1.jpg" alt="Game Interface">
+              <img src="assets/images/cpp-tower-defence/2.jpg" alt="Game Map">
+              <img src="assets/images/cpp-tower-defence/3.jpg" alt="Code Screenshot">
             </div>
             <div class="project-overlay">
               <a href="https://github.com/LucasMeldrum/TowerDefence" target="_blank" class="project-link">
@@ -212,16 +275,142 @@
           </div>
           <div class="project-info">
             <div class="project-header">
-              <h3>Tower Defence Game</h3>
+              <h3>C++ Tower Defence Game</h3>
               <span class="project-badge code-badge">Code</span>
             </div>
             <p class="project-description">
-              3D tower defence game featuring grid-based maps, enemy pathfinding, and resource management.
+              Complete tower defence game built from scratch in C++ with custom GUI, algorithms, and game mechanics.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">GUI</span>
+              <span class="tech-tag">Algorithms</span>
+              <span class="tech-tag">Game Logic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: Unity Tower Defence -->
+        <div class="project-card" data-category="game">
+          <div class="project-media">
+            <div class="image-carousel">
+              <img src="assets/images/UnityTowerDefence/BuildPhase.png" alt="Unity Game Screenshot 1">
+              <img src="assets/images/UnityTowerDefence/TowerKill.gif" alt="Unity Game Screenshot 2">
+              <img src="assets/images/UnityTowerDefence/TowerPlace.gif" alt="Unity Editor">
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/LucasMeldrum/CART315/tree/main/Projects/TowerDefence" target="_blank" class="project-link">
+                <i class="ti ti-external-link"></i> View Repo
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-header">
+              <h3>Unity Tower Defence Game</h3>
+              <span class="project-badge game-badge">Game Dev</span>
+            </div>
+            <p class="project-description">
+              Enhanced tower defence game with fun mechanics, wave systems, and dynamic enemy pathfinding built in Unity.
             </p>
             <div class="project-tech">
               <span class="tech-tag">Unity</span>
               <span class="tech-tag">C#</span>
-              <span class="tech-tag">AI</span>
+              <span class="tech-tag">Game Mechanics</span>
+              <span class="tech-tag">3D Graphics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8: Unplug App -->
+        <div class="project-card" data-category="code">
+          <div class="project-media">
+            <div class="image-carousel">
+              <img src="assets/images/Unplug/StatsPage.png" alt="App Screen 1">
+              <img src="assets/images/Unplug/Emulation.png" alt="App Screen 2">
+              <img src="assets/images/Unplug/InteractionsBetweenScreens.png" alt="App Dashboard">
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/LucasMeldrum/CART470_CapstoneProject/tree/main" target="_blank" class="project-link">
+                <i class="ti ti-external-link"></i> View Repo
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-header">
+              <h3>Unplug: Digital Wellbeing App</h3>
+              <span class="project-badge code-badge">Code</span>
+            </div>
+            <p class="project-description">
+              Mobile app promoting minimal screen time with gamification, competition against friends, and progress tracking.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">API Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: Variation Jam -->
+        <div class="project-card" data-category="game">
+          <div class="project-media">
+            <div class="image-carousel">
+              <img src="assets/images/variation-jam/Var1.png" alt="Yars Revenge Mod 1">
+              <img src="assets/images/variation-jam/Var2.png" alt="Yars Revenge Mod 2">
+              <img src="assets/images/variation-jam/Var3.png" alt="Game Code">
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/LucasMeldrum/CART253/tree/main/topics/assignments/variation-jam" target="_blank" class="project-link">
+                <i class="ti ti-code"></i> View Repo
+              </a>
+              <a href="https://lucasmeldrum.github.io/CART253/topics/assignments/variation-jam" target="_blank" class="project-link">
+                <i class="ti ti-play"></i> Play Game
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-header">
+              <h3>Variation Jam: Yars Revenge</h3>
+              <span class="project-badge game-badge">Game Dev</span>
+            </div>
+            <p class="project-description">
+              Creative modification of Yars Revenge using p5.js, featuring new gameplay mechanics and visual styles.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">p5.js</span>
+              <span class="tech-tag">Game Design</span>
+              <span class="tech-tag">Retro Games</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 10: BandTogether -->
+        <div class="project-card featured" data-category="game">
+          <div class="featured-badge">Featured Project</div>
+          <div class="project-media">
+            <div class="image-carousel">
+              <img src="assets/images/bandtogether/3.gif" alt="BandTogether Screenshot 1">
+              <img src="assets/images/bandtogether/Screenshot 2026-01-15 at 9.35.10 PM.png" alt="BandTogether Screenshot 2">
+              <img src="assets/images/bandtogether/Screenshot 2026-01-15 at 9.35.27 PM.png" alt="Team Collaboration">
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link">View Trailer</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-header">
+              <h3>BandTogether: Ubisoft Competition Game</h3>
+              <span class="project-badge game-badge">Game Dev</span>
+            </div>
+            <p class="project-description">
+              Unity game developed for Ubisoft competition. Large team project with complex mechanics over an extended development period.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">Team Leadership</span>
+              <span class="tech-tag">Game Design</span>
+              <span class="tech-tag">Competition</span>
             </div>
           </div>
         </div>
@@ -233,43 +422,261 @@
   <section class="skills" id="skills">
     <div class="container">
       <div class="section-header">
-        <h2>Skills & Technologies</h2>
+        <h2>Technical Skills</h2>
         <p class="section-subtitle">Tools and technologies I work with</p>
       </div>
       
       <div class="skills-grid">
         <div class="skill-category">
-          <h3><i class="ti ti-code"></i> Development</h3>
+          <h3><i class="ti ti-code"></i> Programming Languages</h3>
           <div class="skill-list">
-            <span class="skill-item">JavaScript/TypeScript</span>
-            <span class="skill-item">Python</span>
-            <span class="skill-item">C#</span>
-            <span class="skill-item">React/React Native</span>
-            <span class="skill-item">Node.js</span>
-            <span class="skill-item">Git & GitHub</span>
+            <div class="skill-item">
+              <span class="skill-name">C++</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Java</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Dart</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">HTML/CSS</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">C#</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
           </div>
         </div>
         
         <div class="skill-category">
-          <h3><i class="ti ti-palette"></i> Design & 3D</h3>
+          <h3><i class="ti ti-palette"></i> Design & Development Tools</h3>
           <div class="skill-list">
-            <span class="skill-item">Blender</span>
-            <span class="skill-item">SketchUp</span>
-            <span class="skill-item">Figma</span>
-            <span class="skill-item">Adobe Creative Suite</span>
-            <span class="skill-item">UI/UX Design</span>
-            <span class="skill-item">3D Modeling</span>
+            <div class="skill-item">
+              <span class="skill-name">Photoshop</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Unity</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Flutter</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">SketchUp</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">p5.js</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Git/GitHub</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Firebase</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 75%"></div>
+              </div>
+            </div>
           </div>
         </div>
         
         <div class="skill-category">
-          <h3><i class="ti ti-devices"></i> Game Dev</h3>
+          <h3><i class="ti ti-devices"></i> Platforms & Methodologies</h3>
           <div class="skill-list">
-            <span class="skill-item">Unity</span>
-            <span class="skill-item">Game Design</span>
-            <span class="skill-item">C# Scripting</span>
-            <span class="skill-item">Asset Creation</span>
-            <span class="skill-item">Prototyping</span>
+            <div class="skill-item">
+              <span class="skill-name">Windows 10/11</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">macOS</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Linux</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Android</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Project Management</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Team Leadership</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Problem Solving</span>
+              <div class="skill-level">
+                <div class="skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about-detail">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p>
+            I'm a passionate creative technologist studying Computer Science and Computational Arts at Concordia University. 
+            My work explores the intersection of technology and art, creating experiences that are both technically sophisticated 
+            and aesthetically compelling.
+          </p>
+          <p>
+            Currently working as a Software Quality Assurance Intern at Matrox, where I develop Python automation tools, debug products, 
+            and gain extensive experience with networking, hardware, OS, and Linux server applications.
+          </p>
+          <div class="about-features">
+            <div class="feature">
+              <i class="ti ti-cpu"></i>
+              <h4>Technical Excellence</h4>
+              <p>Strong foundation in algorithms, data structures, and software architecture with 3.30 GPA</p>
+            </div>
+            <div class="feature">
+              <i class="ti ti-brush"></i>
+              <h4>Creative Vision</h4>
+              <p>Eye for design, color theory, and user experience principles across multiple mediums</p>
+            </div>
+            <div class="feature">
+              <i class="ti ti-users"></i>
+              <h4>Collaborative Spirit</h4>
+              <p>Experience working in teams on large-scale projects and competitions including Ubisoft GameLabs</p>
+            </div>
+          </div>
+          
+          <!-- Work Experience -->
+          <div class="work-experience">
+            <h3><i class="ti ti-briefcase"></i> Work Experience</h3>
+            <div class="experience-item">
+              <h4>Matrox - Software Quality Assurance Intern</h4>
+              <span class="experience-date">2024 - Present</span>
+              <p>Working with multiple departments to debug products, code, and fix issues. Created advanced Python apps to automate long tasks. Gained extensive network, hardware, OS and server (Linux) understanding and application.</p>
+            </div>
+            <div class="experience-item">
+              <h4>Game Design & Testing (Promotion & NetEase)</h4>
+              <span class="experience-date">2022 - 2024</span>
+              <p>Play tested video games, provided feedback, insight, and constructive criticism. Worked in teams to meet deadlines and goals for major game titles.</p>
+            </div>
+            <div class="experience-item">
+              <h4>Customer Service Roles</h4>
+              <span class="experience-date">2021 - 2023</span>
+              <p>Worked at Dollarama and Super C, developing teamwork, schedule management, and client assistance skills.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="education-card">
+            <h3><i class="ti ti-school"></i> Education</h3>
+            <div class="education-item">
+              <h4>Concordia University</h4>
+              <p>Bachelor of Computer Science – Joint Major in Computational Arts and Computer Science [COOP]</p>
+              <span class="education-year">2021 - 2026 (Expected)</span>
+              <div class="education-details">
+                <span class="gpa">GPA: 3.30</span>
+                <span class="member">Member of Institute for Co-operative Education</span>
+              </div>
+              <div class="courses">
+                <strong>Relevant Courses:</strong> Object Oriented Programming I & II • Advanced C++ • Hardware • Operating Systems
+              </div>
+            </div>
+            <div class="education-item">
+              <h4>Marianopolis College</h4>
+              <p>DEC in Pure and Applied Science</p>
+              <span class="education-year">2020 - 2022</span>
+            </div>
+          </div>
+          
+          <!-- Additional Info -->
+          <div class="additional-info">
+            <h3><i class="ti ti-language"></i> Languages</h3>
+            <div class="language-list">
+              <div class="language-item">
+                <span class="language-name">English</span>
+                <span class="language-level">Native</span>
+              </div>
+              <div class="language-item">
+                <span class="language-name">French</span>
+                <span class="language-level">Fluent</span>
+              </div>
+              <div class="language-item">
+                <span class="language-name">Italian</span>
+                <span class="language-level">Conversational</span>
+              </div>
+            </div>
+            
+            <h3><i class="ti ti-certificate"></i> Additional Skills</h3>
+            <div class="additional-skills">
+              <span class="additional-skill">Visual Studio</span>
+              <span class="additional-skill">Eclipse</span>
+              <span class="additional-skill">Premiere Pro</span>
+              <span class="additional-skill">Audition</span>
+              <span class="additional-skill">3D Modeling</span>
+              <span class="additional-skill">YouTube Content</span>
+              <span class="additional-skill">Valid Driving Permit</span>
+            </div>
           </div>
         </div>
       </div>
@@ -282,8 +689,8 @@
       <div class="contact-grid">
         <div class="contact-info">
           <div class="section-header">
-            <h2>Get in Touch</h2>
-            <p class="section-subtitle">Let's create something amazing together</p>
+            <h2>Let's Connect</h2>
+            <p class="section-subtitle">Interested in collaboration or just want to chat?</p>
           </div>
           
           <div class="contact-methods">
@@ -304,35 +711,53 @@
             </div>
             
             <div class="contact-item">
-              <i class="ti ti-brand-linkedin"></i>
+              <i class="ti ti-map-pin"></i>
               <div>
-                <h4>LinkedIn</h4>
-                <a href="https://www.linkedin.com/in/lucasmeldrum/" target="_blank">linkedin.com/in/lucasmeldrum</a>
+                <h4>Location</h4>
+                <p>Montreal, Quebec</p>
               </div>
             </div>
             
             <div class="contact-item">
-              <i class="ti ti-brand-github"></i>
+              <i class="ti ti-building"></i>
               <div>
-                <h4>GitHub</h4>
-                <a href="https://github.com/LucasMeldrum" target="_blank">github.com/LucasMeldrum</a>
+                <h4>University</h4>
+                <p>Concordia University</p>
               </div>
             </div>
+          </div>
+          
+          <div class="social-links-large">
+            <a href="https://github.com/LucasMeldrum" target="_blank" class="social-link">
+              <i class="ti ti-brand-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/lucasmeldrum/" target="_blank" class="social-link">
+              <i class="ti ti-brand-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:lucasmeldrum04@gmail.com" class="social-link">
+              <i class="ti ti-mail"></i>
+              <span>Email</span>
+            </a>
           </div>
         </div>
         
         <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <input type="text" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Your Email" required>
+          <h3>Send a Message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
           </div>
           <div class="form-group">
             <input type="text" placeholder="Subject" required>
           </div>
           <div class="form-group">
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <textarea placeholder="Your Message" rows="6" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary">
             <i class="ti ti-send"></i> Send Message
@@ -348,7 +773,7 @@
       <div class="footer-content">
         <div class="footer-logo">LM</div>
         <p class="footer-text">
-          Creative developer blending technology with artistic expression
+          Bridging the gap between technology and artistic expression through innovative digital creations
         </p>
         <div class="footer-social">
           <a href="https://github.com/LucasMeldrum" target="_blank" aria-label="GitHub">
@@ -360,6 +785,12 @@
           <a href="mailto:lucasmeldrum04@gmail.com" aria-label="Email">
             <i class="ti ti-mail"></i>
           </a>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </div>
         <div class="footer-copyright">
           &copy; <span id="currentYear"></span> Lucas Meldrum. All rights reserved.
