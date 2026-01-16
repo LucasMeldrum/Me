@@ -255,7 +255,7 @@ function showNotification(message, type = 'info') {
     notification.style.transform = 'translateX(120%)';
     setTimeout(() => notification.remove(), 300);
   });
-  
+  z
   // Auto remove after 5 seconds
   setTimeout(() => {
     if (notification.parentNode) {

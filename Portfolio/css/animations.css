@@ -10,20 +10,79 @@
   }
 }
 
-@keyframes float-particle {
+@keyframes wordFloat {
   0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 0;
+    transform: translate(0, 0) rotate(0deg) scale(1);
   }
-  10% {
-    opacity: 1;
+  25% {
+    transform: translate(100px, -50px) rotate(90deg) scale(1.1);
   }
-  90% {
-    opacity: 1;
+  50% {
+    transform: translate(0, -100px) rotate(180deg) scale(1);
+  }
+  75% {
+    transform: translate(-100px, -50px) rotate(270deg) scale(1.1);
   }
   100% {
-    transform: translate(100px, -100px) rotate(180deg);
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes wordPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes wordGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 15px currentColor, 0 0 25px currentColor;
+  }
+}
+
+@keyframes wordSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wordOrbit {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes wordBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes wordAppear {
+  from {
     opacity: 0;
+    transform: scale(0.5) rotate(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
   }
 }
 
@@ -178,6 +237,27 @@
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
+/* Word Cloud Animations */
+.word-appear {
+  animation: wordAppear 0.8s ease-out forwards;
+}
+
+.word-pulse {
+  animation: wordPulse 2s ease-in-out infinite;
+}
+
+.word-glow {
+  animation: wordGlow 3s ease-in-out infinite;
+}
+
+.word-bounce {
+  animation: wordBounce 2s ease-in-out infinite;
+}
+
+.word-spin {
+  animation: wordSpin 20s linear infinite;
+}
+
 /* Hover Effects */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -323,7 +403,6 @@
 .stagger-children > *:nth-child(8) { animation-delay: 0.8s; }
 .stagger-children > *:nth-child(9) { animation-delay: 0.9s; }
 .stagger-children > *:nth-child(10) { animation-delay: 1s; }
-.stagger-children > *:nth-child(11) { animation-delay: 1.1s; }
 
 /* Page Load Animation */
 .page-load {
