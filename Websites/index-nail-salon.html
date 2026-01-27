@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ongles Naturels | Natural Nails - Montréal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #f8e9e9;
+            --secondary: #e8d3d3;
+            --accent: #c4a484;
+            --dark: #5a4a42;
+            --light: #fefbf9;
+            --text: #333333;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: var(--dark);
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: -8px;
+            left: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            color: var(--accent);
+            margin-right: 8px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .language-switcher {
+            display: flex;
+            margin-left: 2rem;
+        }
+        
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--secondary);
+            padding: 5px 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        .lang-btn:first-child {
+            border-radius: 4px 0 0 4px;
+            border-right: none;
+        }
+        
+        .lang-btn:last-child {
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .lang-btn.active {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(248, 233, 233, 0.9), rgba(248, 233, 233, 0.8)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            animation: fadeIn 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--text);
+            animation: fadeIn 1.2s ease;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 2px solid var(--accent);
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Services */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            text-align: center;
+            padding: 30px 25px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Gallery */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* About */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Contact */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-top: 5px;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--secondary);
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Language Content */
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.4rem; }
+            h2 { font-size: 2rem; }
+            
+            .about-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--light);
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+                padding: 20px;
+                transform: translateY(-150%);
+                transition: var(--transition);
+                opacity: 0;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0 0 15px 0;
+            }
+            
+            .language-switcher {
+                margin-left: 0;
+                justify-content: center;
+            }
+            
+            .header-container {
+                position: relative;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-spa"></i>
+                <span class="lang-fr">Ongles Naturels</span>
+                <span class="lang-en" style="display:none;">Natural Nails</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" class="nav-link">
+                        <span class="lang-fr">Accueil</span>
+                        <span class="lang-en" style="display:none;">Home</span>
+                    </a></li>
+                    <li><a href="#services" class="nav-link">
+                        <span class="lang-fr">Services</span>
+                        <span class="lang-en" style="display:none;">Services</span>
+                    </a></li>
+                    <li><a href="#gallery" class="nav-link">
+                        <span class="lang-fr">Galerie</span>
+                        <span class="lang-en" style="display:none;">Gallery</span>
+                    </a></li>
+                    <li><a href="#about" class="nav-link">
+                        <span class="lang-fr">À propos</span>
+                        <span class="lang-en" style="display:none;">About</span>
+                    </a></li>
+                    <li><a href="#contact" class="nav-link">
+                        <span class="lang-fr">Contact</span>
+                        <span class="lang-en" style="display:none;">Contact</span>
+                    </a></li>
+                </ul>
+                
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>
+                <span class="lang-fr">L'art du soin des ongles naturels</span>
+                <span class="lang-en" style="display:none;">The art of natural nail care</span>
+            </h1>
+            <p class="lang-fr">
+                À Montréal depuis 2012, nous nous spécialisons dans les soins des ongles naturels, 
+                les manucures et les pédicures utilisant des produits de qualité et des techniques douces.
+            </p>
+            <p class="lang-en" style="display:none;">
+                In Montreal since 2012, we specialize in natural nail care, 
+                manicures and pedicures using quality products and gentle techniques.
+            </p>
+            <a href="#contact" class="btn">
+                <span class="lang-fr">Prendre rendez-vous</span>
+                <span class="lang-en" style="display:none;">Book an appointment</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="lang-fr">Nos Services</span>
+                    <span class="lang-en" style="display:none;">Our Services</span>
+                </h2>
+            </div>
+            
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="lang-fr">Manucure Naturelle</h3>
+                    <h3 class="lang-en" style="display:none;">Natural Manicure</h3>
+                    <p class="lang-fr">Soin complet des mains et des ongles avec des produits naturels et non-toxiques.</p>
+                    <p class="lang-en" style="display:none;">Complete hand and nail care with natural and non-toxic products.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-foot"></i>
+                    </div>
+                    <h3 class="lang-fr">Pédicure Soin</h3>
+                    <h3 class="lang-en" style="display:none;">Care Pedicure</h3>
+                    <p class="lang-fr">Pédicure relaxante avec soin des pieds, gommage et hydratation en profondeur.</p>
+                    <p class="lang-en" style="display:none;">Relaxing pedicure with foot care, exfoliation and deep hydration.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="lang-fr">Soins Spéciaux</h3>
+                    <h3 class="lang-en" style="display:none;">Special Treatments</h3>
+                    <p class="lang-fr">Traitements spécifiques pour ongles fragiles, cassants ou nécessitant une attention particulière.</p>
+                    <p class="lang-en" style="display:none;">Specific treatments for fragile, brittle nails or those needing special attention.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" style="background-color: var(--primary);">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="lang-fr">Notre Galerie</span>
+                    <span class="lang-en" style="display:none;">Our Gallery</span>
+                </h2>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1607779097044-1b8dc5174060?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Manicure">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1604656853575-b07844f5a824?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Natural nails">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1607779097046-1b8dc5174061?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pedicure">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Nail care">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="lang-fr">À propos de nous</span>
+                    <span class="lang-en" style="display:none;">About Us</span>
+                </h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lang-fr">
+                        <strong>Ongles Naturels</strong> a été fondé à Montréal en 2012 avec une philosophie simple : 
+                        mettre en valeur la beauté naturelle des ongles grâce à des soins de qualité et des techniques respectueuses.
+                    </p>
+                    <p class="lang-fr">
+                        Notre équipe de professionnels est formée aux dernières techniques de soin des ongles, 
+                        en privilégiant toujours la santé et le bien-être de nos clients.
+                    </p>
+                    <p class="lang-fr">
+                        Nous utilisons exclusivement des produits de haute qualité, sans substances nocives, 
+                        pour des résultats qui subliment vos ongles tout en les préservant.
+                    </p>
+                    
+                    <p class="lang-en" style="display:none;">
+                        <strong>Natural Nails</strong> was founded in Montreal in 2012 with a simple philosophy: 
+                        to enhance the natural beauty of nails through quality care and respectful techniques.
+                    </p>
+                    <p class="lang-en" style="display:none;">
+                        Our team of professionals is trained in the latest nail care techniques, 
+                        always prioritizing the health and well-being of our clients.
+                    </p>
+                    <p class="lang-en" style="display:none;">
+                        We exclusively use high-quality products, free from harmful substances, 
+                        for results that enhance your nails while preserving them.
+                    </p>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1607779097044-1b8dc5174060?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Salon">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: var(--primary);">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <span class="lang-fr">Contactez-nous</span>
+                    <span class="lang-en" style="display:none;">Contact Us</span>
+                </h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="lang-fr">Notre Adresse</h3>
+                            <h3 class="lang-en" style="display:none;">Our Address</h3>
+                            <p>Montréal, QC</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="lang-fr">Heures d'ouverture</h3>
+                            <h3 class="lang-en" style="display:none;">Opening Hours</h3>
+                            <p class="lang-fr">Lun-Ven: 9h-19h<br>Samedi: 10h-18h<br>Dimanche: 11h-16h</p>
+                            <p class="lang-en" style="display:none;">Mon-Fri: 9am-7pm<br>Saturday: 10am-6pm<br>Sunday: 11am-4pm</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="lang-fr">Téléphone</h3>
+                            <h3 class="lang-en" style="display:none;">Phone</h3>
+                            <p>(514) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="lang-fr">Email</h3>
+                            <h3 class="lang-en" style="display:none;">Email</h3>
+                            <p>info@onglesnaturels.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label for="name" class="lang-fr">Nom complet</label>
+                            <label for="name" class="lang-en" style="display:none;">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="lang-fr">Adresse email</label>
+                            <label for="email" class="lang-en" style="display:none;">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="lang-fr">Service souhaité</label>
+                            <label for="service" class="lang-en" style="display:none;">Desired Service</label>
+                            <select id="service" class="form-control">
+                                <option class="lang-fr" value="manicure">Manicure Naturelle</option>
+                                <option class="lang-en" value="manicure" style="display:none;">Natural Manicure</option>
+                                <option class="lang-fr" value="pedicure">Pédicure Soin</option>
+                                <option class="lang-en" value="pedicure" style="display:none;">Care Pedicure</option>
+                                <option class="lang-fr" value="special">Soins Spéciaux</option>
+                                <option class="lang-en" value="special" style="display:none;">Special Treatments</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="lang-fr">Message</label>
+                            <label for="message" class="lang-en" style="display:none;">Message</label>
+                            <textarea id="message" class="form-control" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <span class="lang-fr">Envoyer la demande</span>
+                            <span class="lang-en" style="display:none;">Send Request</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Ongles Naturels</div>
+                    <p class="lang-fr">
+                        Soins des ongles naturels à Montréal depuis 2012. 
+                        Qualité, expertise et respect de votre bien-être.
+                    </p>
+                    <p class="lang-en" style="display:none;">
+                        Natural nail care in Montreal since 2012. 
+                        Quality, expertise and respect for your well-being.
+                    </p>
+                    
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/pages/Ongles-Naturels/343637182325255" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="lang-fr">Liens rapides</h3>
+                    <h3 class="lang-en" style="display:none;">Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#home" class="lang-fr">Accueil</a><a href="#home" class="lang-en" style="display:none;">Home</a></li>
+                        <li><a href="#services" class="lang-fr">Services</a><a href="#services" class="lang-en" style="display:none;">Services</a></li>
+                        <li><a href="#gallery" class="lang-fr">Galerie</a><a href="#gallery" class="lang-en" style="display:none;">Gallery</a></li>
+                        <li><a href="#about" class="lang-fr">À propos</a><a href="#about" class="lang-en" style="display:none;">About</a></li>
+                        <li><a href="#contact" class="lang-fr">Contact</a><a href="#contact" class="lang-en" style="display:none;">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="lang-fr">Contact</h3>
+                    <h3 class="lang-en" style="display:none;">Contact</h3>
+                    <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Montréal, QC</p>
+                    <p><i class="fas fa-phone" style="margin-right: 10px;"></i> (514) 123-4567</p>
+                    <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> info@onglesnaturels.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="lang-fr">&copy; 2023 Ongles Naturels. Tous droits réservés.</p>
+                <p class="lang-en" style="display:none;">&copy; 2023 Natural Nails. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Language switcher
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const frenchElements = document.querySelectorAll('.lang-fr');
+            const englishElements = document.querySelectorAll('.lang-en');
+            
+            langButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    
+                    // Update active button
+                    langButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide language content
+                    if (lang === 'fr') {
+                        frenchElements.forEach(el => el.style.display = 'inline');
+                        englishElements.forEach(el => el.style.display = 'none');
+                        document.documentElement.lang = 'fr';
+                        document.documentElement.dir = 'ltr';
+                    } else {
+                        frenchElements.forEach(el => el.style.display = 'none');
+                        englishElements.forEach(el => el.style.display = 'inline');
+                        document.documentElement.lang = 'en';
+                        document.documentElement.dir = 'ltr';
+                    }
+                    
+                    // Update select options visibility
+                    updateSelectOptions(lang);
+                });
+            });
+            
+            function updateSelectOptions(lang) {
+                const select = document.getElementById('service');
+                const options = select.querySelectorAll('option');
+                
+                options.forEach(option => {
+                    if (option.classList.contains('lang-' + lang)) {
+                        option.style.display = 'block';
+                        option.selected = option.value === select.value;
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Form submission (non-functional as requested)
+            const appointmentForm = document.getElementById('appointmentForm');
+            
+            appointmentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const lang = document.querySelector('.lang-btn.active').getAttribute('data-lang');
+                
+                if (lang === 'fr') {
+                    alert(`Merci ${name}! Votre demande de rendez-vous a été reçue. Nous vous contacterons bientôt pour confirmer.`);
+                } else {
+                    alert(`Thank you ${name}! Your appointment request has been received. We will contact you soon to confirm.`);
+                }
+                
+                // Reset form
+                appointmentForm.reset();
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Gallery lightbox simulation
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const imgSrc = this.querySelector('img').src;
+                    const lang = document.querySelector('.lang-btn.active').getAttribute('data-lang');
+                    
+                    if (lang === 'fr') {
+                        alert("Fonctionnalité de visualisation d'image complète - À implémenter");
+                    } else {
+                        alert("Full image view functionality - To be implemented");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

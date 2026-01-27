@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Web Development Portfolio - Lucas Meldrum">
+  <title>Web Development Portfolio | Lucas Meldrum</title>
+  
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+  <link rel="stylesheet" href="css/websites-portfolio.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">LM</a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle">
+          <i class="ti ti-sun"></i>
+        </button>
+      </div>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="ti ti-menu-2"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <main class="websites-portfolio-page">
+    <div class="container">
+      <a href="index.html#projects" class="back-link">
+        <i class="ti ti-arrow-left"></i> Back to Projects
+      </a>
+
+      <div class="websites-header">
+        <h1>Web Development Portfolio</h1>
+        <p class="subtitle">Two responsive websites showcasing front-end development skills</p>
+        <div class="tech-tags">
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Responsive Design</span>
+          <span class="tech-tag">Mobile-First</span>
+        </div>
+      </div>
+
+      <!-- Nail Salon Website -->
+      <div class="website-showcase">
+        <div class="website-preview">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <div class="browser-controls">
+                <span class="control red"></span>
+                <span class="control yellow"></span>
+                <span class="control green"></span>
+              </div>
+              <div class="browser-url">nail-salon-website/index.html</div>
+            </div>
+            <div class="website-frame">
+              <iframe src="Websites/index-nail-salon.html" frameborder="0" 
+                      title="Nail Salon Website Preview" 
+                      loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="website-info">
+          <div class="website-title">
+            <h2>Nail & Beauty Salon Website</h2>
+            <span class="website-badge">Live Demo</span>
+          </div>
+          
+          <div class="website-description">
+            <p>A fully responsive beauty salon website with appointment booking system, service showcase, and client testimonials. Built with a focus on user experience and mobile responsiveness.</p>
+            
+            <div class="features-list">
+              <h3><i class="ti ti-check"></i> Key Features</h3>
+              <ul>
+                <li>Responsive design that works on all devices</li>
+                <li>Interactive appointment booking form</li>
+                <li>Service gallery with filtering options</li>
+                <li>Customer testimonials carousel</li>
+                <li>Contact form with validation</li>
+                <li>Google Maps integration for location</li>
+              </ul>
+            </div>
+
+            <div class="code-highlights">
+              <h3><i class="ti ti-code"></i> Technical Highlights</h3>
+              <div class="code-examples">
+                <div class="code-example">
+                  <h4>CSS Flexbox/Grid</h4>
+                  <p>Modern layout techniques for responsive design</p>
+                </div>
+                <div class="code-example">
+                  <h4>JavaScript Form Validation</h4>
+                  <p>Client-side validation for better user experience</p>
+                </div>
+                <div class="code-example">
+                  <h4>Mobile-First Approach</h4>
+                  <p>Optimized for mobile devices first</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="website-actions">
+              <a href="Websites/index-nail-salon.html" target="_blank" class="btn btn-primary">
+                <i class="ti ti-external-link"></i> Open Website
+              </a>
+              <button class="btn btn-secondary view-source" data-website="nail-salon">
+                <i class="ti ti-code"></i> View Source Code
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pizza Restaurant Website -->
+      <div class="website-showcase">
+        <div class="website-info">
+          <div class="website-title">
+            <h2>Pizza Restaurant Website</h2>
+            <span class="website-badge">Live Demo</span>
+          </div>
+          
+          <div class="website-description">
+            <p>A modern restaurant website with online ordering system, interactive menu, and reservation booking. Features a clean, appetizing design with smooth animations.</p>
+            
+            <div class="features-list">
+              <h3><i class="ti ti-check"></i> Key Features</h3>
+              <ul>
+                <li>Online food ordering system</li>
+                <li>Interactive menu with add-to-cart functionality</li>
+                <li>Table reservation system</li>
+                <li>Responsive image gallery</li>
+                <li>Shopping cart with real-time updates</li>
+                <li>Opening hours and location info</li>
+              </ul>
+            </div>
+
+            <div class="code-highlights">
+              <h3><i class="ti ti-code"></i> Technical Highlights</h3>
+              <div class="code-examples">
+                <div class="code-example">
+                  <h4>DOM Manipulation</h4>
+                  <p>Dynamic content updates without page reload</p>
+                </div>
+                <div class="code-example">
+                  <h4>Local Storage</h4>
+                  <p>Saves cart items between sessions</p>
+                </div>
+                <div class="code-example">
+                  <h4>CSS Animations</h4>
+                  <p>Smooth transitions and hover effects</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="website-actions">
+              <a href="Websites/index-pizza-restaurant.html" target="_blank" class="btn btn-primary">
+                <i class="ti ti-external-link"></i> Open Website
+              </a>
+              <button class="btn btn-secondary view-source" data-website="pizza-restaurant">
+                <i class="ti ti-code"></i> View Source Code
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="website-preview">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <div class="browser-controls">
+                <span class="control red"></span>
+                <span class="control yellow"></span>
+                <span class="control green"></span>
+              </div>
+              <div class="browser-url">pizza-restaurant-website/index.html</div>
+            </div>
+            <div class="website-frame">
+              <iframe src="Websites/index-pizza-restaurant.html" frameborder="0" 
+                      title="Pizza Restaurant Website Preview" 
+                      loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Development Process -->
+      <div class="development-process">
+        <h2><i class="ti ti-timeline"></i> Development Process</h2>
+        
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Planning & Design</h3>
+            <p>Created wireframes and mockups for both websites, focusing on user flow and mobile-first design principles.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>HTML Structure</h3>
+            <p>Built semantic HTML5 markup with accessibility in mind, ensuring proper structure for screen readers.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>CSS Styling</h3>
+            <p>Implemented responsive designs using CSS Grid, Flexbox, and media queries. Added animations and transitions for better UX.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>JavaScript Functionality</h3>
+            <p>Added interactive features like form validation, image carousels, shopping carts, and dynamic content updates.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <h3>Testing & Optimization</h3>
+            <p>Tested across multiple browsers and devices, optimized images, and improved performance for faster loading.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Source Code Modal -->
+      <div class="source-modal" id="sourceModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Source Code</h3>
+            <button class="modal-close">
+              <i class="ti ti-x"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="file-explorer">
+              <div class="file-tree">
+                <div class="file-item active" data-file="index.html">
+                  <i class="ti ti-file-text"></i>
+                  <span>index.html</span>
+                </div>
+                <div class="file-item" data-file="style.css">
+                  <i class="ti ti-file-code"></i>
+                  <span>style.css</span>
+                </div>
+                <div class="file-item" data-file="script.js">
+                  <i class="ti ti-file-code"></i>
+                  <span>script.js</span>
+                </div>
+                <div class="file-item" data-file="assets">
+                  <i class="ti ti-folder"></i>
+                  <span>assets/</span>
+                </div>
+              </div>
+              <div class="code-viewer">
+                <div class="code-toolbar">
+                  <div class="file-name" id="currentFile">index.html</div>
+                  <button class="copy-code">
+                    <i class="ti ti-copy"></i> Copy
+                  </button>
+                </div>
+                <pre id="codeContent"><code class="html">Select a file to view its code</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">LM</div>
+        <p class="footer-text">
+          Bridging the gap between technology and artistic expression through innovative digital creations
+        </p>
+        <div class="footer-social">
+          <a href="https://github.com/LucasMeldrum" target="_blank" aria-label="GitHub">
+            <i class="ti ti-brand-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/lucasmeldrum/" target="_blank" aria-label="LinkedIn">
+            <i class="ti ti-brand-linkedin"></i>
+          </a>
+          <a href="mailto:lucasmeldrum04@gmail.com" aria-label="Email">
+            <i class="ti ti-mail"></i>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-copyright">
+          &copy; <span id="currentYear"></span> Lucas Meldrum. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/websites-portfolio.js"></script>
+</body>
+</html>

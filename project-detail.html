@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Project Details - Lucas Meldrum Portfolio">
+  <title>Project Details | Lucas Meldrum</title>
+  
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">LM</a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle">
+          <i class="ti ti-sun"></i>
+        </button>
+      </div>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="ti ti-menu-2"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <main class="project-detail-page">
+    <div class="container">
+      <a href="index.html#projects" class="back-link">
+        <i class="ti ti-arrow-left"></i> Back to Projects
+      </a>
+
+      <div class="project-detail-header">
+        <div class="project-title-section">
+          <h1 id="projectTitle">Project Title</h1>
+          <div class="project-meta">
+            <span class="project-category" id="projectCategory">Category</span>
+            <span class="project-year" id="projectYear">2024</span>
+          </div>
+          <div class="project-tech-list" id="projectTech">
+            <!-- Technology tags will be inserted here -->
+          </div>
+        </div>
+      </div>
+
+      <div class="project-content">
+        <div class="project-gallery-section">
+          <div class="main-gallery">
+            <div class="main-image-container">
+              <img id="mainImage" src="" alt="Main project image">
+            </div>
+            <div class="gallery-controls">
+              <button class="gallery-btn prev-btn">
+                <i class="ti ti-chevron-left"></i>
+              </button>
+              <div class="image-counter">
+                <span id="currentImage">1</span> / <span id="totalImages">5</span>
+              </div>
+              <button class="gallery-btn next-btn">
+                <i class="ti ti-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="thumbnail-gallery" id="thumbnailGallery">
+            <!-- Thumbnails will be inserted here -->
+          </div>
+        </div>
+
+        <div class="project-info-section">
+          <div class="project-description-card">
+            <h3><i class="ti ti-info-circle"></i> Project Overview</h3>
+            <p id="projectDescription">Project description will appear here...</p>
+            
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="ti ti-calendar"></i>
+                <div>
+                  <h4>Duration</h4>
+                  <p id="projectDuration">3 months</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="ti ti-tools"></i>
+                <div>
+                  <h4>Tools Used</h4>
+                  <p id="projectTools">Photoshop, Illustrator</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="ti ti-users"></i>
+                <div>
+                  <h4>Role</h4>
+                  <p id="projectRole">Lead Designer & Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-links">
+            <h3><i class="ti ti-external-link"></i> Project Links</h3>
+            <div class="links-grid">
+              <a href="#" id="githubLink" class="project-link-btn" target="_blank">
+                <i class="ti ti-brand-github"></i>
+                <span>View Code</span>
+              </a>
+              <a href="#" id="demoLink" class="project-link-btn" target="_blank">
+                <i class="ti ti-play"></i>
+                <span>Live Demo</span>
+              </a>
+              <a href="#" id="downloadLink" class="project-link-btn">
+                <i class="ti ti-download"></i>
+                <span>Assets</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-challenges">
+            <h3><i class="ti ti-bulb"></i> Key Learnings</h3>
+            <ul id="challengesList">
+              <li>Challenge 1 description</li>
+              <li>Challenge 2 description</li>
+              <li>Challenge 3 description</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">LM</div>
+        <p class="footer-text">
+          Bridging the gap between technology and artistic expression through innovative digital creations
+        </p>
+        <div class="footer-social">
+          <a href="https://github.com/LucasMeldrum" target="_blank" aria-label="GitHub">
+            <i class="ti ti-brand-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/lucasmeldrum/" target="_blank" aria-label="LinkedIn">
+            <i class="ti ti-brand-linkedin"></i>
+          </a>
+          <a href="mailto:lucasmeldrum04@gmail.com" aria-label="Email">
+            <i class="ti ti-mail"></i>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-copyright">
+          &copy; <span id="currentYear"></span> Lucas Meldrum. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/project-detail.js"></script>
+</body>
+</html>

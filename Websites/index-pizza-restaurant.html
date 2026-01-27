@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza-Pié - Montreal's Most Fun Pizza!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --tomato-red: #E63946;
+            --cheese-yellow: #FFB347;
+            --dough-beige: #F8EDE3;
+            --basil-green: #2A9D8F;
+            --pepperoni-brown: #9C6644;
+            --text-dark: #264653;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', cursive;
+        }
+
+        body {
+            background-color: var(--dough-beige);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--tomato-red);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            margin-right: 10px;
+            transform: rotate(15deg);
+            animation: spin 20s linear infinite;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 var(--pepperoni-brown);
+        }
+
+        .logo-subtext {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: normal;
+            text-shadow: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--cheese-yellow);
+            color: var(--tomato-red);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 var(--tomato-red);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cheese-yellow);
+            color: var(--tomato-red);
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--basil-green);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            color: var(--tomato-red);
+            position: relative;
+        }
+
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 5px;
+            background-color: var(--cheese-yellow);
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item {
+            background-color: var(--dough-beige);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-item-content {
+            padding: 20px;
+        }
+
+        .menu-item h3 {
+            color: var(--tomato-red);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--basil-green);
+            font-size: 1.3rem;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: var(--dough-beige);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--tomato-red);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 10px 10px 0 var(--cheese-yellow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Location Section */
+        .location-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .location-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .location-map {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            background-color: var(--basil-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .location-info {
+            flex: 1;
+        }
+
+        .location-info h3 {
+            font-size: 2rem;
+            color: var(--tomato-red);
+            margin-bottom: 20px;
+        }
+
+        .location-info p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .location-info i {
+            margin-right: 10px;
+            color: var(--basil-green);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            color: var(--cheese-yellow);
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--cheese-yellow);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Pizza Animation */
+        .pizza-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .pizza-slice {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            animation: floatAround 20s linear infinite;
+        }
+
+        /* Animations */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes floatAround {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(100px, 100px) rotate(90deg);
+            }
+            50% {
+                transform: translate(50px, 200px) rotate(180deg);
+            }
+            75% {
+                transform: translate(-50px, 150px) rotate(270deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content, .location-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Pizza Animation Background -->
+    <div class="pizza-animation" id="pizzaAnimation"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">🍕</div>
+                    <div class="logo-text">Pizza-Pié<span class="logo-subtext">Montreal's Fun Pizza Spot</span></div>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Pizza So Good, It's Irrational!</h1>
+            <p>At Pizza-Pié, we combine Montreal's vibrant food culture with the mathematical perfection of pizza. Every slice is calculated for maximum deliciousness!</p>
+            <a href="#menu" class="cta-button">Order Now for π% Off!</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Delicious Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Pepperoni Pizza">
+                    <div class="menu-item-content">
+                        <h3>Pepperoni π</h3>
+                        <p>Classic pepperoni with our special sauce and just the right amount of cheese. A perfect circle of flavor!</p>
+                        <div class="price">$18.14 (≈π × $5.78)</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1593246049226-ded77bf90326?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Veggie Pizza">
+                    <div class="menu-item-content">
+                        <h3>Veggie Radian</h3>
+                        <p>Fresh vegetables arranged in perfect radial symmetry. Bell peppers, mushrooms, onions, and olives.</p>
+                        <div class="price">$19.99</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Montreal-style Pizza">
+                    <div class="menu-item-content">
+                        <h3>MTL Smoked Meat Pizza</h3>
+                        <p>Our Montreal special! Smoked meat, pickles, and mustard sauce on a delicious pizza crust.</p>
+                        <div class="price">$21.99</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Delicious Story</h2>
+                    <p>Pizza-Pié was founded in 2020 by two math enthusiasts who believed that pizza-making could be perfected through geometry and passion. We wanted to bring a slice of fun to Montreal's food scene.</p>
+                    <p>Our name combines "pizza" with the mathematical constant π (pi), representing both our love for circular food and our commitment to perfection in every pie we make.</p>
+                    <p>All our pizzas are made with fresh, locally-sourced ingredients whenever possible, and our dough is proofed for exactly 3.14 hours to achieve the perfect texture!</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Pizza chefs at work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" id="location">
+        <div class="container">
+            <h2 class="section-title">Find Us in Montreal</h2>
+            <div class="location-content">
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Pizza-Pié Montreal Location</p>
+                    </div>
+                </div>
+                <div class="location-info">
+                    <h3>Visit Our Shop</h3>
+                    <p><i class="fas fa-map-pin"></i> 3141 Pie Avenue, Montreal, QC H3π 1π9</p>
+                    <p><i class="fas fa-clock"></i> Open Monday-Sunday: 11am - 11pm (or until the dough runs out!)</p>
+                    <p><i class="fas fa-phone"></i> (514) 555-0314</p>
+                    <p><i class="fas fa-pizza-slice"></i> Takeout, delivery, and dine-in available</p>
+                    <p><i class="fas fa-subway"></i> Near Mont-Royal Metro Station</p>
+                    <p>We're located in the heart of Montreal's Plateau neighborhood, just a short walk from Parc La Fontaine. Look for the giant pizza slice with the π symbol!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Pizza-Pié</h3>
+                    <p>Montreal's most mathematically delicious pizza! Combining geometric perfection with mouth-watering flavors.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> (514) 555-0314</p>
+                    <p><i class="fas fa-envelope"></i> hello@pizza-pie-mtl.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 3141 Pie Avenue, Montreal</p>
+                </div>
+                <div class="footer-column">
+                    <h3>π Hours</h3>
+                    <p>Monday-Friday: 11am - 11pm</p>
+                    <p>Saturday-Sunday: 11am - 12am</p>
+                    <p>Holidays: 12pm - 10pm</p>
+                    <p><em>Closed on Tau Day (June 28)</em></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Pizza-Pié Montreal. All rights reserved. π ≈ 3.14159...</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create floating pizza slices
+        document.addEventListener('DOMContentLoaded', function() {
+            const pizzaAnimation = document.getElementById('pizzaAnimation');
+            const pizzaIcons = ['🍕', '🧀', '🍅', '🍄', '🥓', '🌶️', '🧅', '🫒'];
+            
+            for (let i = 0; i < 15; i++) {
+                const pizzaSlice = document.createElement('div');
+                pizzaSlice.className = 'pizza-slice';
+                pizzaSlice.textContent = pizzaIcons[Math.floor(Math.random() * pizzaIcons.length)];
+                pizzaSlice.style.left = `${Math.random() * 100}%`;
+                pizzaSlice.style.top = `${Math.random() * 100}%`;
+                pizzaSlice.style.fontSize = `${Math.random() * 2 + 1.5}rem`;
+                pizzaSlice.style.animationDuration = `${Math.random() * 20 + 15}s`;
+                pizzaSlice.style.animationDelay = `${Math.random() * 5}s`;
+                pizzaAnimation.appendChild(pizzaSlice);
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // CTA button smooth scroll
+            document.querySelector('.cta-button').addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetSection = document.querySelector('#menu');
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Animate menu items on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe menu items
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s, transform 0.5s';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
